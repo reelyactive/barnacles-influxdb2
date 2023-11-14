@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const BarnaclesInfluxDB2 = require('../lib/barnaclesinfluxdb2.js');
+
+
+let barnaclesInfluxDB2 = new BarnaclesInfluxDB2({ printErrors: true });
+
+
+console.log('barnacles-influxdb2 instantiation test');
