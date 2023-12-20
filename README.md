@@ -4,6 +4,47 @@ barnacles-influxdb2
 Write dynamic ambient data from context-aware physical spaces to InfluxDB v2.
 
 
+Hello barnacles-influxdb2
+-------------------------
+
+```javascript
+const Barnacles = require('barnacles');
+const BarnaclesInfluxDB2 = require('barnacles-influxdb2');
+
+let barnacles = new Barnacles();
+barnacles.addInterface(BarnaclesInfluxDB2, { /* See options below */ });
+```
+
+
+Options
+-------
+
+__barnacles-influxdb2__ supports the following options:
+
+| Property      | Default                    | Description                    | 
+|:--------------|:---------------------------|:-------------------------------|
+| url           | "http://localhost:8086"    | Local InfluxDB2 instance       |
+| token         | process.env.INFLUXDB_TOKEN | Secret token                   |
+| org           | "reelyActive"              | Organisation                   |
+| bucket        | "pareto-anywhere"          | Bucket                         |
+
+To set the INFLUXDB_TOKEN as an environment variable in Linux:
+
+    export INFLUXDB_TOKEN=pasteTokenHere
+
+
+Contributing
+------------
+
+Discover [how to contribute](CONTRIBUTING.md) to this open source project which upholds a standard [code of conduct](CODE_OF_CONDUCT.md).
+
+
+Security
+--------
+
+Consult our [security policy](SECURITY.md) for best practices using this open source software and to report vulnerabilities.
+
+
 License
 -------
 
