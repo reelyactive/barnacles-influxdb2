@@ -60,7 +60,10 @@ __barnacles-influxdb2__ converts standard [dynamb](https://reelyactive.github.io
 | illuminance       | Float            | none                                 |
 | isButtonPressed   | Boolean          | Logical OR of all values             |
 | isContactDetected | Boolean          | Logical OR of all values             |
+| isHealthy         | Boolean          | none                                 |
 | isMotionDetected  | Boolean          | Logical OR of all values             |
+| isLiquidDetected  | Boolean          | Logical OR of all values             |
+| levelPercentage   | Float            | none                                 |
 | magneticField     | Float            | RMS of x, y, z                       |
 | numberOfOccupants | Unsigned Integer | none                                 |
 | passageCounts     | Unsigned Integer | Sum of all values                    |
