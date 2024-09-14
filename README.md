@@ -1,18 +1,42 @@
 barnacles-influxdb2
 ===================
 
-Write dynamic ambient data from context-aware physical spaces to InfluxDB v2.
+__barnacles-influxdb2__ writes ambient IoT timeseries data to InfluxDB v2.
+
+![Overview of barnacles-influxdb2](https://reelyactive.github.io/barnacles-influxdb2/images/overview.png)
+
+__barnacles-influxdb2__ ingests a real-time stream of _dynamb_ objects from [barnacles](https://github.com/reelyactive/barnacles/) which it writes to a given InfluxDB v2 instance.  It couples seamlessly with reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source IoT middleware.
+
+__barnacles-influxdb2__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnacles-influxdb2) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.
 
 
-Hello barnacles-influxdb2
--------------------------
+Pareto Anywhere integration
+---------------------------
+
+A common application of __barnacles-influxdb2__ is to write IoT data from [pareto-anywhere](https://github.com/reelyactive/pareto-anywhere) to an InfluxDB v2 timeseries database.  Simply follow our [Create a Pareto Anywhere startup script](https://reelyactive.github.io/diy/pareto-anywhere-startup-script/) tutorial using the script below:
 
 ```javascript
-const Barnacles = require('barnacles');
-const BarnaclesInfluxDB2 = require('barnacles-influxdb2');
+#!/usr/bin/env node
 
-let barnacles = new Barnacles();
-barnacles.addInterface(BarnaclesInfluxDB2, { /* See options below */ });
+const ParetoAnywhere = require('../lib/paretoanywhere.js');
+
+// Edit the options to specify the InfluxDB v2 instance
+const BARNACLES_INFLUXDB2_OPTIONS = {};
+
+// ----- Exit gracefully if the optional dependency is not found -----
+let BarnaclesInfluxDB2;
+try {
+  BarnaclesInfluxDB2 = require('barnacles-influxdb2');
+}
+catch(err) {
+  console.log('This script requires barnacles-influxdb2.  Install with:');
+  console.log('\r\n    "npm install barnacles-influxdb2"\r\n');
+  return console.log('and then run this script again.');
+}
+// -------------------------------------------------------------------
+
+let pa = new ParetoAnywhere();
+pa.barnacles.addInterface(BarnaclesInfluxDB2, BARNACLES_INFLUXDB2_OPTIONS);
 ```
 
 
