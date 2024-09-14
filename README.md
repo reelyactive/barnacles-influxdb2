@@ -40,6 +40,42 @@ pa.barnacles.addInterface(BarnaclesInfluxDB2, BARNACLES_INFLUXDB2_OPTIONS);
 ```
 
 
+Supported dynamb properties
+---------------------------
+
+__barnacles-influxdb2__ converts standard [dynamb](https://reelyactive.github.io/diy/cheatsheet/#dynamb) properties into the following InfluxDB v2 types:
+
+| Property          | InfluxDB v2 type | Conversion                           | 
+|:------------------|:-----------------|:-------------------------------------|
+| acceleration      | Float            | RMS of x, y, z                       |
+| amperage          | Float            | none                                 |
+| angleOfRotation   | Float            | none                                 |
+| amperages         | Float            | RMS of all values                    |
+| batteryPercentage | Float            | none                                 |
+| batteryVoltage    | Float            | none                                 |
+| distance          | Float            | none                                 |
+| elevation         | Float            | none                                 |
+| heading           | Float            | none                                 |
+| heartRate         | Float            | none                                 |
+| illuminance       | Float            | none                                 |
+| isButtonPressed   | Boolean          | Logical OR of all values             |
+| isContactDetected | Boolean          | Logical OR of all values             |
+| isMotionDetected  | Boolean          | Logical OR of all values             |
+| magneticField     | Float            | RMS of x, y, z                       |
+| numberOfOccupants | Unsigned Integer | none                                 |
+| passageCounts     | Unsigned Integer | Sum of all values                    |
+| pressure          | Float            | none                                 |
+| pressures         | Float            | RMS of all values                    |
+| relativeHumidity  | Float            | none                                 |
+| speed             | Float            | none                                 |
+| temperature       | Float            | none                                 |
+| temperatures      | Float            | RMS of all values                    |
+| txCount           | Unsigned Integer | none                                 |
+| uptime            | Unsigned Integer | none                                 |
+| voltage           | Float            | none                                 |
+| voltages          | Float            | RMS of all values                    |
+
+
 Options
 -------
 
