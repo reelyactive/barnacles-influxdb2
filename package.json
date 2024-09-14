@@ -5,13 +5,13 @@
     "name": "reelyActive",
     "email": "info@reelyactive.com"
   },
-  "description": "Write dynamic ambient data from context-aware physical spaces to InfluxDB v2.  We believe in an open Internet of Things.",
+  "description": "Write ambient IoT sensor timeseries data to InfluxDB v2.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
     "IoT",
     "InfluxDB"
   ],
-  "version": "1.0.2",
+  "version": "1.1.0",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -24,7 +24,7 @@
     "url": "https://github.com/reelyactive/barnacles-influxdb2.git"
   },
   "dependencies": {
-    "@influxdata/influxdb-client": "^1.33.2"
+    "@influxdata/influxdb-client": "^1.35.0"
   },
   "devDependencies": {},
   "bugs": {
