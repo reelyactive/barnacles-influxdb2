@@ -45,38 +45,44 @@ Supported dynamb properties
 
 __barnacles-influxdb2__ converts standard [dynamb](https://reelyactive.github.io/diy/cheatsheet/#dynamb) properties into the following InfluxDB v2 types:
 
-| Property          | InfluxDB v2 type | Conversion                           | 
-|:------------------|:-----------------|:-------------------------------------|
-| acceleration      | Float            | RMS of x, y, z                       |
-| amperage          | Float            | none                                 |
-| angleOfRotation   | Float            | none                                 |
-| amperages         | Float            | RMS of all values                    |
-| batteryPercentage | Float            | none                                 |
-| batteryVoltage    | Float            | none                                 |
-| distance          | Float            | none                                 |
-| elevation         | Float            | none                                 |
-| heading           | Float            | none                                 |
-| heartRate         | Float            | none                                 |
-| illuminance       | Float            | none                                 |
-| isButtonPressed   | Boolean          | Logical OR of all values             |
-| isContactDetected | Boolean          | Logical OR of all values             |
-| isHealthy         | Boolean          | none                                 |
-| isMotionDetected  | Boolean          | Logical OR of all values             |
-| isLiquidDetected  | Boolean          | Logical OR of all values             |
-| levelPercentage   | Float            | none                                 |
-| magneticField     | Float            | RMS of x, y, z                       |
-| numberOfOccupants | Unsigned Integer | none                                 |
-| passageCounts     | Unsigned Integer | Sum of all values                    |
-| pressure          | Float            | none                                 |
-| pressures         | Float            | RMS of all values                    |
-| relativeHumidity  | Float            | none                                 |
-| speed             | Float            | none                                 |
-| temperature       | Float            | none                                 |
-| temperatures      | Float            | RMS of all values                    |
-| txCount           | Unsigned Integer | none                                 |
-| uptime            | Unsigned Integer | none                                 |
-| voltage           | Float            | none                                 |
-| voltages          | Float            | RMS of all values                    |
+| Property                     | InfluxDB v2 type | Conversion                | 
+|:-----------------------------|:-----------------|:--------------------------|
+| acceleration                 | Float            | RMS of x, y, z            |
+| ammoniaConcentration         | Float            | none                      |
+| amperage                     | Float            | none                      |
+| angleOfRotation              | Float            | none                      |
+| amperages                    | Float            | RMS of all values         |
+| batteryPercentage            | Float            | none                      |
+| batteryVoltage               | Float            | none                      |
+| carbonDioxideConcentration   | Float            | none                      |
+| carbonMonoxideConcentration  | Float            | none                      |
+| distance                     | Float            | none                      |
+| elevation                    | Float            | none                      |
+| heading                      | Float            | none                      |
+| heartRate                    | Float            | none                      |
+| illuminance                  | Float            | none                      |
+| isButtonPressed              | Boolean          | Logical OR of all values  |
+| isContactDetected            | Boolean          | Logical OR of all values  |
+| isHealthy                    | Boolean          | none                      |
+| isMotionDetected             | Boolean          | Logical OR of all values  |
+| isLiquidDetected             | Boolean          | Logical OR of all values  |
+| levelPercentage              | Float            | none                      |
+| magneticField                | Float            | RMS of x, y, z            |
+| methaneConcentration         | Float            | none                      |
+| nitrogenDioxideConcentration | Float            | none                      |
+| numberOfOccupants            | Unsigned Integer | none                      |
+| passageCounts                | Unsigned Integer | Sum of all values         |
+| pressure                     | Float            | none                      |
+| pressures                    | Float            | RMS of all values         |
+| relativeHumidity             | Float            | none                      |
+| speed                        | Float            | none                      |
+| temperature                  | Float            | none                      |
+| temperatures                 | Float            | RMS of all values         |
+| txCount                      | Unsigned Integer | none                      |
+| uptime                       | Unsigned Integer | none                      |
+| volatileOrganicCompoundsConcentration | Float   | none                      |
+| voltage                      | Float            | none                      |
+| voltages                     | Float            | RMS of all values         |
 
 
 Options
