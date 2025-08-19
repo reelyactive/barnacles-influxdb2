@@ -51,6 +51,7 @@ __barnacles-influxdb2__ converts standard [dynamb](https://reelyactive.github.io
 | ammoniaConcentration         | Float            | none                      |
 | amperage                     | Float            | none                      |
 | angleOfRotation              | Float            | none                      |
+| angularVelocity              | Float            | none                      |
 | amperages                    | Float            | RMS of all values         |
 | batteryPercentage            | Float            | none                      |
 | batteryVoltage               | Float            | none                      |
@@ -67,10 +68,13 @@ __barnacles-influxdb2__ converts standard [dynamb](https://reelyactive.github.io
 | isMotionDetected             | Boolean          | Logical OR of all values  |
 | isLiquidDetected             | Boolean          | Logical OR of all values  |
 | levelPercentage              | Float            | none                      |
+| luminousFlux                 | Float            | none                      |
 | magneticField                | Float            | RMS of x, y, z            |
 | methaneConcentration         | Float            | none                      |
 | nitrogenDioxideConcentration | Float            | none                      |
 | numberOfOccupants            | Unsigned Integer | none                      |
+| numberOfReceivedDevices      | Unsigned Integer | none                      |
+| numberOfStrongestReceivedDevices | Unsigned Integer | none                  |
 | passageCounts                | Unsigned Integer | Sum of all values         |
 | pressure                     | Float            | none                      |
 | pressures                    | Float            | RMS of all values         |
